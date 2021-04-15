@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/styles-learnmore.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Binary Tree</title>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="logo" id="logo">
+                <a href="/" class="nav-logo"><img src="{{url_for('static',filename = 'images/bt0.png')}}" height="40px"></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item nav-item1">
+                    <a href="/learnmore" class="nav-link">Learn More</a>
+                </li>
+                <li class="nav-item nav-item2">
+                    <a href="/tryit" class="nav-link">Try it!</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="maincontainer">
+        <div class="heading" style="padding-left: 0px;">
+            Binary Trees
+        </div>
+        <section>
+            <div class="section-heading">
+                .introduction()
+            </div>
+            <div class="imagediv">
+                <img src="{{url_for('static',filename = 'images/bt1.png')}}" height="300px">
+            </div>
+            <p class="textcontent p1">
+                In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child. A recursive definition using just set theory notions is that a (non-empty) binary tree
+                is a tuple (L, S, R), where L and R are binary trees or the empty set and S is a singleton set containing the root. Some authors allow the binary tree to be the empty set as well.
+            </p>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                .types_of_binary_trees()
+            </div>
+            <div class="section-subheading">
+                Full Binary Tree
+            </div>
+            <div class="imagediv">
+                <img src="{{url_for('static',filename = 'images/fbt.png')}}" height="300px">
+            </div>
+            <p class="textcontent p2">
+                A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children.It is also known as a proper binary tree.
+            </p>
+
+            <div class="section-subheading">
+                Perfect Binary Tree
+            </div>
+            <div class="imagediv">
+                <img src="{{url_for('static',filename = 'images/pbt.png')}}" height="300px">
+            </div>
+            <p class="textcontent p2">
+                A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level.<br><br>All the internal nodes have a degree of 2. Recursively, a perfect binary tree
+                can be defined as:<br><br>&emsp;&emsp;&emsp;1. If a single node has no children, it is a perfect binary tree of height h = 0<br>&emsp;&emsp;&emsp;2. If a node has h > 0, it is a perfect binary tree if both of its subtrees are of height
+                h - 1 and are non-overlapping.
+            </p>
+
+            <div class="section-subheading">
+                Complete Binary Tree
+            </div>
+            <div class="imagediv">
+                <img src="{{url_for('static',filename = 'images/cbt.png')}}" height="300px">
+            </div>
+            <p class="textcontent p2">
+                A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left.<br><br>A complete binary tree is just like a full binary tree, but with two major differences<br><br>&emsp;&emsp;&emsp;1.
+                All the leaf elements must lean towards the left.<br>&emsp;&emsp;&emsp;2. The last leaf element might not have a right sibling i.e. a complete binary tree doesn't have to be a full binary tree.
+            </p>
+        </section>
+
+
+        <section>
+            <div class="section-heading">
+                .operations()
+            </div>
+            <div class="section-subheading">
+                Insertion
+            </div>
+            <p class="textcontent p2">
+                <p class="textcontent">1. Select the first element of the list to be the root node. (no. of elements on level-I: 1)
+                </p>
+                <div class="imagediv">
+                    <img src="{{url_for('static',filename = 'images/cbt1.png')}}" height="150px">
+                </div>
+                <br><p class="textcontent">2. Put the second element as a left child of the root node and the third element as the right child. (no. of elements on level-II: 2)</p>
+                <div class="imagediv">
+                    <img src="{{url_for('static',filename = 'images/cbt2.png')}}" height="200px">
+                </div>
+                <br>
+                <br><p class="textcontent">3. Put the next two elements as children of the left node of the second level. Again, put the next two elements as children of the right node of the second level (no. of elements on level-III: 4) elements).
+                <br>4. Keep repeating until you reach the last element.</p><br>
+                <div class="imagediv">
+                    <img src="{{url_for('static',filename = 'images/cbt3.png')}}" height="270px">
+                </div>
+            </p>
+            <div class="section-subheading">
+                Deletion
+            </div>
+            <p class="textcontent p2">
+                1. Starting at the root, find the deepest and rightmost node in the binary tree and node which we want to delete.<br> 2. Replace the deepest rightmost node’s data with node to be deleted.<br> 3. Then delete the deepest rightmost node.
+            </p>
+            <div class="section-subheading">
+                Traversal
+            </div>
+            <p class="textcontent p2">
+                Traversing a tree means visiting every node in the tree. You might, for instance, want to add all the values in the tree or find the largest one. For all these operations, you will need to visit each node of the tree. Linear data structures like arrays,
+                stacks, queues, and linked lists have only one way to read the data. But a hierarchical data structure like a tree can be traversed in different ways.
+            </p>
+        </section>
+        <section>
+            <div class = "section-heading">Citations</div>
+            <p class="textcontent p2">
+                1. https://www.programiz.com/dsa/binary-tree
+            </p>
+        </section>
+    </div>
+</body>
+
+<script src="{{url_for('static',filename = 'js/app-learnmore.js')}}"></script>
+
+</html>
