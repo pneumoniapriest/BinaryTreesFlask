@@ -1,3 +1,6 @@
+<br>
+<br>
+
 # Binary Trees: A Flask Website
 A dumb site made with flask. Looks kinda cool though.
 
@@ -12,6 +15,3 @@ A dumb site made with flask. Looks kinda cool though.
 
 ## Try it Page.
 Under Construction.
-
-
-
