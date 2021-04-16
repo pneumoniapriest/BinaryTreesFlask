@@ -5,7 +5,7 @@
 A dumb site made with flask. Looks kinda cool though.
 
 ## Landing Page
-![LandingPage](https://user-images.githubusercontent.com/63923090/114937409-6645e000-9e5b-11eb-9e4f-40aed7a395f1.png)
+![LandingPage](https://user-images.githubusercontent.com/63923090/114990240-f31d8780-9eb5-11eb-80e9-7500a9617893.png)
 <br>
 
 ## Learn More Page. 
@@ -19,3 +19,7 @@ A dumb site made with flask. Looks kinda cool though.
 
 ## Try it Page.
 Under Construction.
+<br>
+<br>
+
+Hosted on heroku: https://binarytrees.herokuapp.com/
